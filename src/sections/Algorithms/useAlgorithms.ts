@@ -116,8 +116,12 @@ export function useAlgorithms() {
 
   const setTarget = useCallback(
     (key: TargetKey) => {
+      liveRef.current.target = key
       setTargetState(key)
-      if (key !== 'gaussian') setRhoState(0.8)
+      if (key !== 'gaussian') {
+        liveRef.current.rho = 0.8
+        setRhoState(0.8)
+      }
       resetChain()
     },
     [resetChain]
@@ -125,6 +129,7 @@ export function useAlgorithms() {
 
   const setAlgo = useCallback(
     (key: SamplerKey) => {
+      liveRef.current.algo = key
       setAlgoState(key)
       resetChain()
     },
@@ -133,6 +138,7 @@ export function useAlgorithms() {
 
   const setRho = useCallback(
     (value: number) => {
+      liveRef.current.rho = value
       setRhoState(value)
       resetChain()
     },

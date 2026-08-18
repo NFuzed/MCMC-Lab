@@ -121,6 +121,7 @@ export function useCompare() {
 
   const setPgTarget = useCallback(
     (key: TargetKey) => {
+      liveRef.current.pgTarget = key
       setPgTargetState(key)
       reset()
     },
