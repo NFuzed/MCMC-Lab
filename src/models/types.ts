@@ -17,3 +17,9 @@ export interface StepResult {
   /** Gibbs takes two sub-steps per iteration; this is the point after the first. */
   intermediate?: Point
 }
+
+/** Result of advancing an entire ensemble (population of walkers) by one sweep. */
+export interface EnsembleStepResult {
+  next: Point[]
+  acceptedCount: number
+}
