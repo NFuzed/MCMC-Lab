@@ -2,7 +2,7 @@ export type Point = [x: number, y: number]
 
 export type TargetKey = 'gaussian' | 'bimodal' | 'banana'
 export type SamplerKey = 'mh' | 'gibbs' | 'hmc' | 'nuts'
-export type TabKey = 'overview' | 'algorithms' | 'compare' | 'casestudy'
+export type TabKey = 'overview' | 'algorithms' | 'compare' | 'ensembles' | 'casestudy'
 
 export interface Target {
   key: string

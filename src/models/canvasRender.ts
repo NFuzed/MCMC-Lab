@@ -80,6 +80,30 @@ export function drawDensityPanel(canvas: HTMLCanvasElement | null, target: Targe
   }
 }
 
+/** Draws the target density as a heatmap plus every walker's current position as a dot. */
+export function drawEnsemblePanel(canvas: HTMLCanvasElement | null, target: Target, walkers: Point[]) {
+  if (!canvas) return
+  const ctx = canvas.getContext('2d')!
+  const W = canvas.width
+  const H = canvas.height
+  ctx.clearRect(0, 0, W, H)
+  ctx.drawImage(getHeatmap(target), 0, 0, W, H)
+
+  const [xmin, xmax, ymin, ymax] = target.range
+  const toPx = (x: number, y: number): Point => [
+    ((x - xmin) / (xmax - xmin)) * W,
+    H - ((y - ymin) / (ymax - ymin)) * H,
+  ]
+
+  ctx.fillStyle = 'rgba(198,113,57,0.85)'
+  walkers.forEach(([x, y]) => {
+    const [px, py] = toPx(x, y)
+    ctx.beginPath()
+    ctx.arc(px, py, 4, 0, Math.PI * 2)
+    ctx.fill()
+  })
+}
+
 /** Draws x (terracotta) and y (sage) trace lines over the tail of a chain. */
 export function drawTracePanel(canvas: HTMLCanvasElement | null, chain: Point[]) {
   if (!canvas) return
