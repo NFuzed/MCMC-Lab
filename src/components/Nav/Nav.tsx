@@ -4,6 +4,7 @@ const TABS: { key: TabKey; label: string }[] = [
   { key: 'overview', label: 'Overview' },
   { key: 'algorithms', label: 'Algorithms' },
   { key: 'compare', label: 'Compare' },
+  { key: 'ensembles', label: 'Ensembles' },
   { key: 'casestudy', label: 'Case study' },
 ]
 

@@ -3,6 +3,7 @@ import { Nav } from './components/Nav/Nav'
 import { Overview } from './sections/Overview/Overview'
 import { Algorithms } from './sections/Algorithms/Algorithms'
 import { Compare } from './sections/Compare/Compare'
+import { Ensembles } from './sections/Ensembles/Ensembles'
 import { CaseStudy } from './sections/CaseStudy/CaseStudy'
 import type { TabKey } from './models/types'
 
@@ -15,6 +16,7 @@ export function App() {
       {tab === 'overview' && <Overview />}
       {tab === 'algorithms' && <Algorithms />}
       {tab === 'compare' && <Compare />}
+      {tab === 'ensembles' && <Ensembles />}
       {tab === 'casestudy' && <CaseStudy />}
     </div>
   )
