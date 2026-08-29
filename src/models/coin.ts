@@ -29,7 +29,7 @@ export function drawCoinPosterior(canvas: HTMLCanvasElement | null, heads: numbe
   })
   ctx.lineTo(W, H)
   ctx.closePath()
-  ctx.fillStyle = 'rgba(29,75,73,0.25)'
+  ctx.fillStyle = 'rgba(21,97,109,0.25)'
   ctx.fill()
 
   ctx.beginPath()
@@ -39,7 +39,7 @@ export function drawCoinPosterior(canvas: HTMLCanvasElement | null, heads: numbe
     if (i === 0) ctx.moveTo(x, y)
     else ctx.lineTo(x, y)
   })
-  ctx.strokeStyle = '#1d4b49'
+  ctx.strokeStyle = '#15616d'
   ctx.lineWidth = 2.5
   ctx.stroke()
 }

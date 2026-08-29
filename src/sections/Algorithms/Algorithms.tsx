@@ -59,8 +59,8 @@ export function Algorithms() {
             }}
           />
           <p style={{ fontSize: 12, color: 'var(--color-neutral-600)', margin: '6px 0 0' }}>
-            Trace of x (terracotta) and y (sage) over the last 300 draws — a mixing chain looks noisy, a stuck one
-            looks flat.
+            Trace of x (Oxford blue) and y (viridian) over the last 300 draws — a mixing chain looks noisy, a stuck
+            one looks flat.
           </p>
         </div>
 
