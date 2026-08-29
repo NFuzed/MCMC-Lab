@@ -2,6 +2,7 @@ import type { TabKey } from '../../models/types'
 
 const TABS: { key: TabKey; label: string }[] = [
   { key: 'overview', label: 'Overview' },
+  { key: 'markov', label: 'Markov Chains' },
   { key: 'algorithms', label: 'Algorithms' },
   { key: 'compare', label: 'Compare' },
   { key: 'ensembles', label: 'Ensembles' },

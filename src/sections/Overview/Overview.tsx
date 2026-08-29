@@ -12,7 +12,15 @@ export function Overview() {
         arriving at a new belief that accounts for both what you assumed and what you observed.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20, margin: '40px 0' }}>
+      <div className="card elev-md" style={{ padding: 28, margin: '32px 0 0' }}>
+        <div className="formula-label">Core formula</div>
+        <div className="formula">P(θ | D) = P(D | θ) · P(θ) / P(D)</div>
+        <p style={{ margin: '14px 0 0', fontSize: 14, color: 'var(--color-neutral-700)' }}>
+          θ is the parameter, D is the observed data — posterior = likelihood × prior, divided by the evidence.
+        </p>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20, margin: '20px 0 40px' }}>
         <div className="card elev-sm" style={{ padding: 24 }}>
           <span className="tag tag-accent-2">Prior</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
@@ -23,6 +31,12 @@ export function Overview() {
           <span className="tag tag-accent">Likelihood</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
             How probable the observed data is, for each possible value of the parameter.
+          </p>
+        </div>
+        <div className="card elev-sm" style={{ padding: 24 }}>
+          <span className="tag tag-accent">Evidence</span>
+          <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
+            Probability of that data under all hypotheses — the normalizing constant.
           </p>
         </div>
         <div className="card elev-sm" style={{ padding: 24 }}>
@@ -74,8 +88,8 @@ export function Overview() {
           dimensions and its normalizing constant is an intractable integral. <strong>Markov chain Monte Carlo
           (MCMC)</strong> sidesteps this: instead of computing the posterior, it builds a Markov chain whose
           samples converge to it, exploring high-density regions of parameter space by random walk or by
-          following the gradient of the density. The next section shows four such samplers exploring the same
-          distributions.
+          following the gradient of the density. The next section builds up what that means — starting with a frog
+          hopping between lily pads — before the samplers themselves.
         </p>
       </div>
     </section>

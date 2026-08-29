@@ -52,6 +52,12 @@ export function Ensembles() {
             Each walker jumps along the difference between two other random walkers, scaled by γ ≈ 2.38/√(2d) —
             the population's own spread sets the step size.
           </p>
+          <div style={{ marginTop: 10 }}>
+            <div className="formula-label">Formula</div>
+            <div className="formula" style={{ fontSize: 12 }}>
+              xᵢ′ = xᵢ + γ(x_r1 − x_r2) + ε,  γ = 2.38/√(2d)
+            </div>
+          </div>
           <p style={{ fontSize: 12, color: 'var(--color-neutral-600)', margin: '8px 0 0' }}>
             {popGenerations} generations · {popAcceptRate}% accepted
           </p>
@@ -72,6 +78,12 @@ export function Ensembles() {
             walkers split into two halves and stretch toward a random walker in the other half, invariant to
             how correlated or skewed the target is.
           </p>
+          <div style={{ marginTop: 10 }}>
+            <div className="formula-label">Formula</div>
+            <div className="formula" style={{ fontSize: 12 }}>
+              {'X′ = Xⱼ + z·(Xₖ − Xⱼ),  z ~ g(z) ∝ 1/√z on [1/a, a]\naccept with min(1, z^(d−1) · p(X′)/p(X))'}
+            </div>
+          </div>
           <p style={{ fontSize: 12, color: 'var(--color-neutral-600)', margin: '8px 0 0' }}>
             {emceeGenerations} generations · {emceeAcceptRate}% accepted
           </p>

@@ -18,6 +18,16 @@ const ALGO_DESCRIPTIONS: Record<SamplerKey, string> = {
   nuts: 'Extends HMC by automatically choosing how far to simulate, stopping when the trajectory starts turning back on itself — no hand-tuned step count.',
 }
 
+const ALGO_FORMULAS: Record<SamplerKey, string> = {
+  mh: 'α = min(1, p(x′) / p(x))\naccept if log U < log p(x′) − log p(x),  U ~ Uniform(0,1)',
+  gibbs:
+    'xᵢ ~ p(xᵢ | x₋ᵢ)\n(here approximated per-axis: propose xᵢ′, accept via the same M-H rule\nas above, using only the coordinates that change)',
+  hmc:
+    'H(θ,p) = −log p(θ) + ½ pᵀp\nleapfrog:  p += (ε/2)∇log p(θ)   θ += ε p   p += (ε/2)∇log p(θ)\naccept if log U < H(θ,p) − H(θ′,p′)',
+  nuts:
+    'same leapfrog dynamics as HMC, doubling the trajectory in a random\ndirection each round; stop on the U-turn check:\n(θ⁺ − θ⁻)·p⁻ < 0   or   (θ⁺ − θ⁻)·p⁺ < 0',
+}
+
 const ALGO_TAGS: Record<SamplerKey, { className: string; text: string }> = {
   mh: { className: 'tag-accent-2', text: 'Random walk' },
   gibbs: { className: 'tag-accent-2', text: 'Random walk' },
@@ -165,6 +175,7 @@ export function useAlgorithms() {
     algoLabel: ALGO_LABELS[algo],
     algoTag: ALGO_TAGS[algo],
     algoDescription: ALGO_DESCRIPTIONS[algo],
+    algoFormula: ALGO_FORMULAS[algo],
     setTarget,
     setAlgo,
     setRho,

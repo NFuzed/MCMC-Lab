@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Nav } from './components/Nav/Nav'
 import { Overview } from './sections/Overview/Overview'
+import { MarkovChains } from './sections/MarkovChains/MarkovChains'
 import { Algorithms } from './sections/Algorithms/Algorithms'
 import { Compare } from './sections/Compare/Compare'
 import { Ensembles } from './sections/Ensembles/Ensembles'
@@ -14,6 +15,7 @@ export function App() {
     <div style={{ background: 'var(--color-bg)', minHeight: '100vh', fontFamily: 'var(--font-body)', color: 'var(--color-text)' }}>
       <Nav active={tab} onChange={setTab} />
       {tab === 'overview' && <Overview />}
+      {tab === 'markov' && <MarkovChains />}
       {tab === 'algorithms' && <Algorithms />}
       {tab === 'compare' && <Compare />}
       {tab === 'ensembles' && <Ensembles />}

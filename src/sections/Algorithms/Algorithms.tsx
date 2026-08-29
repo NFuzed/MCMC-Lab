@@ -20,6 +20,7 @@ export function Algorithms() {
     algoLabel,
     algoTag,
     algoDescription,
+    algoFormula,
     setTarget,
     setAlgo,
     setRho,
@@ -141,6 +142,12 @@ export function Algorithms() {
             <p style={{ fontSize: 14, lineHeight: 1.55, margin: 0, color: 'var(--color-neutral-800)' }}>
               {algoDescription}
             </p>
+            <div style={{ marginTop: 14 }}>
+              <div className="formula-label">Formula</div>
+              <div className="formula" style={{ fontSize: 13 }}>
+                {algoFormula}
+              </div>
+            </div>
             <p style={{ fontSize: 13, color: 'var(--color-neutral-600)', margin: '10px 0 0' }}>
               {samples} samples drawn · {acceptRate}% accepted
             </p>
