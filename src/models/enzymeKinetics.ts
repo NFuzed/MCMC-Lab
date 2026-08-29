@@ -44,7 +44,7 @@ export function drawEnzymeData(canvas: HTMLCanvasElement | null, data: EnzymeDat
   const W = canvas.width
   const H = canvas.height
   ctx.clearRect(0, 0, W, H)
-  ctx.fillStyle = '#f5ead8'
+  ctx.fillStyle = '#eef4f1'
   ctx.fillRect(0, 0, W, H)
 
   const xmax = 35
@@ -64,7 +64,7 @@ export function drawEnzymeData(canvas: HTMLCanvasElement | null, data: EnzymeDat
       if (S === 0) ctx.moveTo(px, py)
       else ctx.lineTo(px, py)
     }
-    ctx.strokeStyle = 'rgba(198,113,57,0.18)'
+    ctx.strokeStyle = 'rgba(217,126,66,0.18)'
     ctx.lineWidth = 1.5
     ctx.stroke()
   }
@@ -73,7 +73,7 @@ export function drawEnzymeData(canvas: HTMLCanvasElement | null, data: EnzymeDat
     const [px, py] = toPx(d.S, d.v)
     ctx.beginPath()
     ctx.arc(px, py, 4.5, 0, Math.PI * 2)
-    ctx.fillStyle = '#201e1d'
+    ctx.fillStyle = '#13213f'
     ctx.fill()
   })
 }
@@ -85,7 +85,7 @@ export function drawEnzymePosterior(canvas: HTMLCanvasElement | null, chain: Poi
   const W = canvas.width
   const H = canvas.height
   ctx.clearRect(0, 0, W, H)
-  ctx.fillStyle = '#f5ead8'
+  ctx.fillStyle = '#eef4f1'
   ctx.fillRect(0, 0, W, H)
 
   const n = chain.length
@@ -104,7 +104,7 @@ export function drawEnzymePosterior(canvas: HTMLCanvasElement | null, chain: Poi
   const kspan = 20
   const toPx = (vmax: number, km: number): Point => [((vmax - vmin) / vspan) * W, H - ((km - kmin) / kspan) * H]
   const start = Math.max(0, vmaxs.length - 1200)
-  ctx.fillStyle = 'rgba(122,138,94,0.35)'
+  ctx.fillStyle = 'rgba(29,75,73,0.35)'
   for (let i = start; i < vmaxs.length; i++) {
     const [px, py] = toPx(vmaxs[i], kms[i])
     ctx.beginPath()

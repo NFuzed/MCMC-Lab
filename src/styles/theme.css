@@ -1,27 +1,29 @@
 :root {
-  --color-bg: #f5ead8;
-  --color-surface: #ebddc5;
-  --color-text: #201e1d;
-  --color-accent: #c67139;
-  --color-accent-2: #7a8a5e;
-  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+  /* Oxford palette: deep Oxford-navy ink, pale mint ground, terracotta
+     highlight and deep teal accent — taken from the UNIQPlus poster. */
+  --color-bg: #eef4f1;
+  --color-surface: #e1ece6;
+  --color-text: #13213f;
+  --color-accent: #d97e42;
+  --color-accent-2: #1d4b49;
+  --color-divider: color-mix(in srgb, #13213f 16%, transparent);
 
-  --color-neutral-100: #f9f4ed;
-  --color-neutral-200: #eee7db;
-  --color-neutral-300: #dcd3c4;
-  --color-neutral-400: #c0b6a5;
-  --color-neutral-500: #a19786;
-  --color-neutral-600: #82796a;
-  --color-neutral-700: #645c50;
-  --color-neutral-800: #474238;
-  --color-neutral-900: #2e2b25;
+  --color-neutral-100: #f8fbf9;
+  --color-neutral-200: #dce2e4;
+  --color-neutral-300: #c1c8ce;
+  --color-neutral-400: #a6afb9;
+  --color-neutral-500: #8a95a3;
+  --color-neutral-600: #6f7c8e;
+  --color-neutral-700: #536278;
+  --color-neutral-800: #384963;
+  --color-neutral-900: #1c2f4d;
 
-  --color-accent-100: #fff2eb;
-  --color-accent-200: #ffe1d0;
-  --color-accent-800: #643312;
+  --color-accent-100: #fbeee2;
+  --color-accent-200: #f3d6b8;
+  --color-accent-800: #5c3216;
 
-  --color-accent-2-100: #f0fae1;
-  --color-accent-2-800: #3d472b;
+  --color-accent-2-100: #e2f0ec;
+  --color-accent-2-800: #0b2624;
 
   --font-heading: 'Caprasimo', system-ui, sans-serif;
   --font-heading-weight: 400;
@@ -38,9 +40,9 @@
   --radius-md: 16px;
   --radius-lg: 28px;
 
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
-  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
-  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #1c2f4d 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #1c2f4d 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #1c2f4d 22%, transparent);
 }
 
 * {

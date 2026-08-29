@@ -28,9 +28,9 @@ function getHeatmap(target: Target): HTMLCanvasElement {
   for (let k = 0; k < res * res; k++) {
     const v = Math.exp(grid[k] - maxLd)
     const idx = k * 4
-    img.data[idx] = 245 - 47 * v
-    img.data[idx + 1] = 234 - 121 * v
-    img.data[idx + 2] = 216 - 159 * v
+    img.data[idx] = 238 - 21 * v
+    img.data[idx + 1] = 244 - 118 * v
+    img.data[idx + 2] = 241 - 175 * v
     img.data[idx + 3] = 255
   }
   ctx.putImageData(img, 0, 0)
@@ -62,7 +62,7 @@ export function drawDensityPanel(canvas: HTMLCanvasElement | null, target: Targe
   const start = Math.max(0, n - 800)
 
   ctx.lineWidth = 1.4
-  ctx.strokeStyle = 'rgba(122,138,94,0.55)'
+  ctx.strokeStyle = 'rgba(29,75,73,0.55)'
   ctx.beginPath()
   for (let i = start; i < n; i++) {
     const [px, py] = toPx(chain[i][0], chain[i][1])
@@ -75,7 +75,7 @@ export function drawDensityPanel(canvas: HTMLCanvasElement | null, target: Targe
     const [cx, cy] = toPx(chain[n - 1][0], chain[n - 1][1])
     ctx.beginPath()
     ctx.arc(cx, cy, 5, 0, Math.PI * 2)
-    ctx.fillStyle = '#c67139'
+    ctx.fillStyle = '#d97e42'
     ctx.fill()
   }
 }
@@ -95,7 +95,7 @@ export function drawEnsemblePanel(canvas: HTMLCanvasElement | null, target: Targ
     H - ((y - ymin) / (ymax - ymin)) * H,
   ]
 
-  ctx.fillStyle = 'rgba(198,113,57,0.85)'
+  ctx.fillStyle = 'rgba(217,126,66,0.85)'
   walkers.forEach(([x, y]) => {
     const [px, py] = toPx(x, y)
     ctx.beginPath()
@@ -133,6 +133,6 @@ export function drawTracePanel(canvas: HTMLCanvasElement | null, chain: Point[])
     })
     ctx.stroke()
   }
-  drawLine(xs, '#c67139')
-  drawLine(ys, '#7a8a5e')
+  drawLine(xs, '#d97e42')
+  drawLine(ys, '#1d4b49')
 }
