@@ -6,8 +6,8 @@ interface FrogPondProps {
   shares: number[] | null
 }
 
-const PAD_WIDTH = 64
-const PAD_HEIGHT = 38
+const PAD_WIDTH = 'clamp(30px, 9vw, 64px)'
+const PAD_HEIGHT = 'clamp(18px, 5vw, 38px)'
 
 export function FrogPond({ pads, current, shares }: FrogPondProps) {
   const maxShare = shares ? Math.max(...shares) : 0
@@ -48,8 +48,8 @@ export function FrogPond({ pads, current, shares }: FrogPondProps) {
             {share !== null && (
               <div
                 style={{
-                  width: 32,
-                  height: 32,
+                  width: 'clamp(18px, 5vw, 32px)',
+                  height: 'clamp(18px, 5vw, 32px)',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
@@ -73,7 +73,7 @@ export function FrogPond({ pads, current, shares }: FrogPondProps) {
           left: `${6 + frog.x * 88}%`,
           top: `${12 + frog.y * 68}%`,
           transform: 'translate(-50%, -78%)',
-          fontSize: 28,
+          fontSize: 'clamp(18px, 6vw, 28px)',
           transition: 'left 0.4s ease, top 0.4s ease',
           filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.25))',
           pointerEvents: 'none',

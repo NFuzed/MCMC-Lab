@@ -57,6 +57,13 @@ body {
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.55;
+  overflow-x: hidden;
+}
+
+canvas,
+img,
+svg {
+  max-width: 100%;
 }
 
 h1,
@@ -135,6 +142,7 @@ p {
   padding: var(--space-3);
   border-radius: calc(var(--radius-lg) * 1.15);
   background: var(--color-surface);
+  min-width: 0;
 }
 .elev-sm {
   box-shadow: var(--shadow-sm);
@@ -197,6 +205,90 @@ p {
 .nav-tab.active {
   background: var(--color-accent);
   color: #fff;
+}
+
+/* — responsive nav — */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-neutral-300);
+}
+.nav-tabs-desktop {
+  display: flex;
+  gap: 8px;
+}
+.nav-hamburger {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 4px 10px;
+}
+.nav-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px 16px 16px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+  box-shadow: var(--shadow-md);
+  z-index: 9;
+}
+.nav-menu-mobile .nav-tab {
+  text-align: left;
+}
+
+/* — responsive grids — */
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.grid-cols-2-tight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.grid-cols-casestudy {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 680px) {
+  .nav-bar {
+    padding: 14px 20px;
+  }
+  .nav-tabs-desktop {
+    display: none;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+  .grid-cols-4,
+  .grid-cols-2,
+  .grid-cols-2-tight,
+  .grid-cols-casestudy {
+    grid-template-columns: 1fr;
+  }
 }
 
 input[type='range'] {

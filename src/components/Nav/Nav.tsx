@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { TabKey } from '../../models/types'
 
 const TABS: { key: TabKey; label: string }[] = [
@@ -15,22 +16,18 @@ interface NavProps {
 }
 
 export function Nav({ active, onChange }: NavProps) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleSelect = (key: TabKey) => {
+    onChange(key)
+    setMenuOpen(false)
+  }
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '18px 40px',
-        position: 'sticky',
-        top: 0,
-        zIndex: 10,
-        background: 'var(--color-bg)',
-        borderBottom: '1px solid var(--color-neutral-300)',
-      }}
-    >
+    <div className="nav-bar">
       <div style={{ fontFamily: 'var(--font-heading)', fontSize: 20 }}>MCMC Lab</div>
-      <div style={{ display: 'flex', gap: 8 }}>
+
+      <div className="nav-tabs-desktop">
         {TABS.map((t) => (
           <button
             key={t.key}
@@ -41,6 +38,28 @@ export function Nav({ active, onChange }: NavProps) {
           </button>
         ))}
       </div>
+
+      <button
+        className="nav-hamburger"
+        onClick={() => setMenuOpen((o) => !o)}
+        aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+      >
+        {menuOpen ? '✕' : '☰'}
+      </button>
+
+      {menuOpen && (
+        <div className="nav-menu-mobile">
+          {TABS.map((t) => (
+            <button
+              key={t.key}
+              className={`nav-tab${active === t.key ? ' active' : ''}`}
+              onClick={() => handleSelect(t.key)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

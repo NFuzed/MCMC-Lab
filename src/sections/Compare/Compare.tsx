@@ -41,7 +41,7 @@ export function Compare() {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+      <div className="grid-cols-2">
         <div className="card elev-sm" style={{ padding: 16 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 10 }}>
             <strong>Metropolis-Hastings</strong>

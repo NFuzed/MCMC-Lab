@@ -39,20 +39,30 @@ export function Algorithms() {
       </p>
 
       <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-        <div style={{ flex: 'none' }}>
+        <div style={{ flex: '1 1 320px', maxWidth: 480 }}>
           <canvas
             ref={setCanvasRef}
             width={480}
             height={480}
-            style={{ width: 480, height: 480, borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', display: 'block' }}
+            style={{
+              width: '100%',
+              height: 'auto',
+              aspectRatio: '1',
+              maxWidth: 480,
+              borderRadius: 'var(--radius-lg)',
+              boxShadow: 'var(--shadow-md)',
+              display: 'block',
+            }}
           />
           <canvas
             ref={setTraceRef}
             width={480}
             height={90}
             style={{
-              width: 480,
-              height: 90,
+              width: '100%',
+              height: 'auto',
+              aspectRatio: '480 / 90',
+              maxWidth: 480,
               borderRadius: 'var(--radius-md)',
               background: 'var(--color-neutral-100)',
               display: 'block',
@@ -65,7 +75,7 @@ export function Algorithms() {
           </p>
         </div>
 
-        <div style={{ flex: 1, minWidth: 280, display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <div style={{ flex: 1, minWidth: 240, display: 'flex', flexDirection: 'column', gap: 20 }}>
           <div>
             <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 8, color: 'var(--color-neutral-700)' }}>
               Target distribution
