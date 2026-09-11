@@ -273,24 +273,6 @@ p {
   gap: 24px;
 }
 
-@media (max-width: 680px) {
-  .nav-bar {
-    padding: 14px 20px;
-  }
-  .nav-tabs-desktop {
-    display: none;
-  }
-  .nav-hamburger {
-    display: block;
-  }
-  .grid-cols-4,
-  .grid-cols-2,
-  .grid-cols-2-tight,
-  .grid-cols-casestudy {
-    grid-template-columns: 1fr;
-  }
-}
-
 input[type='range'] {
   accent-color: var(--color-accent);
   width: 100%;
@@ -317,4 +299,53 @@ input[type='range'] {
   color: var(--color-text);
   overflow-x: auto;
   white-space: pre;
+}
+.formula-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  white-space: normal;
+  overflow-x: auto;
+}
+.formula-lg {
+  font-size: 19px;
+}
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.35;
+  vertical-align: middle;
+  flex: none;
+}
+.fraction-bar {
+  width: 100%;
+  height: 0;
+  border-top: 1.5px solid currentColor;
+  margin: 2px 0;
+}
+
+/* — mobile breakpoint overrides — kept last so equal-specificity rules
+   above always lose to these, regardless of the media query matching. */
+@media (max-width: 680px) {
+  .nav-bar {
+    padding: 14px 20px;
+  }
+  .nav-tabs-desktop {
+    display: none;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+  .grid-cols-4,
+  .grid-cols-2,
+  .grid-cols-2-tight,
+  .grid-cols-casestudy {
+    grid-template-columns: 1fr;
+  }
+  .formula-lg {
+    font-size: 15px;
+  }
 }

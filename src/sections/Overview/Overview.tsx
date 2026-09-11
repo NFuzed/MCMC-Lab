@@ -14,7 +14,14 @@ export function Overview() {
 
       <div className="card elev-md" style={{ padding: 28, margin: '32px 0 0' }}>
         <div className="formula-label">Core formula</div>
-        <div className="formula">P(θ | D) = P(D | θ) · P(θ) / P(D)</div>
+        <div className="formula formula-row formula-lg">
+          <span>P(θ | D) =</span>
+          <span className="fraction">
+            <span>P(D | θ) · P(θ)</span>
+            <span className="fraction-bar" />
+            <span>P(D)</span>
+          </span>
+        </div>
         <p style={{ margin: '14px 0 0', fontSize: 14, color: 'var(--color-neutral-700)' }}>
           θ is the parameter, D is the observed data — posterior = likelihood × prior, divided by the evidence.
         </p>
