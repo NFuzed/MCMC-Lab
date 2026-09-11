@@ -20,7 +20,7 @@ export function Overview() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20, margin: '20px 0 40px' }}>
+      <div className="grid-cols-4" style={{ margin: '20px 0 40px' }}>
         <div className="card elev-sm" style={{ padding: 24 }}>
           <span className="tag tag-accent-2">Prior</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>

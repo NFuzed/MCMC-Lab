@@ -32,7 +32,7 @@ export function CaseStudy() {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 24 }}>
+      <div className="grid-cols-casestudy">
         <div className="card elev-sm" style={{ padding: 20 }}>
           <strong style={{ fontSize: 14 }}>Data and posterior predictive curves</strong>
           <canvas

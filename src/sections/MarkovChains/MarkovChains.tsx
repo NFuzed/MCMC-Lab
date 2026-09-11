@@ -14,7 +14,7 @@ export function MarkovChains() {
       </p>
 
       <h2 style={{ fontSize: 22, margin: '0 0 14px' }}>Markov chains</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 16, marginBottom: 16 }}>
+      <div className="grid-cols-2-tight" style={{ marginBottom: 16 }}>
         <div className="card elev-sm" style={{ padding: 20 }}>
           <strong style={{ fontFamily: 'var(--font-heading)', fontSize: 16 }}>What it is</strong>
           <p style={{ marginTop: 10, fontSize: 14, lineHeight: 1.55, color: 'var(--color-neutral-800)' }}>
@@ -36,7 +36,7 @@ export function MarkovChains() {
       </div>
 
       <h2 style={{ fontSize: 22, margin: '0 0 14px' }}>Monte Carlo</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 16, marginBottom: 48 }}>
+      <div className="grid-cols-2-tight" style={{ marginBottom: 48 }}>
         <div className="card elev-sm" style={{ padding: 20 }}>
           <strong style={{ fontFamily: 'var(--font-heading)', fontSize: 16 }}>The idea</strong>
           <p style={{ marginTop: 10, fontSize: 14, lineHeight: 1.55, color: 'var(--color-neutral-800)' }}>
