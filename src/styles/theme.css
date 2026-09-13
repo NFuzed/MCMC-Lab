@@ -207,6 +207,20 @@ p {
   color: #fff;
 }
 
+.nav-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  color: var(--color-text);
+  margin-left: 4px;
+}
+.nav-github:hover {
+  background: var(--color-neutral-200);
+}
+
 /* — responsive nav — */
 .nav-bar {
   display: flex;
