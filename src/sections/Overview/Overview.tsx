@@ -8,8 +8,8 @@ export function Overview() {
       <h1 style={{ fontSize: 44, margin: '0 0 18px' }}>What is Bayesian inference?</h1>
       <p style={{ fontSize: 18, lineHeight: 1.65, color: 'var(--color-neutral-800)', maxWidth: 680 }}>
         Bayesian inference is a way of reasoning about uncertain quantities. You start with a{' '}
-        <strong>belief</strong> about a parameter, then <strong>update</strong> that belief as data arrives —
-        arriving at a new belief that accounts for both what you assumed and what you observed.
+        <strong>belief</strong> about a parameter, then <strong>update</strong> that belief as data arrives. The
+        result is a new belief that accounts for both what you assumed and what you observed.
       </p>
 
       <div className="card elev-md" style={{ padding: 28, margin: '32px 0 0' }}>
@@ -23,7 +23,7 @@ export function Overview() {
           </span>
         </div>
         <p style={{ margin: '14px 0 0', fontSize: 14, color: 'var(--color-neutral-700)' }}>
-          θ is the parameter, D is the observed data — posterior = likelihood × prior, divided by the evidence.
+          θ is the parameter, D is the observed data. Posterior equals likelihood times prior, divided by the evidence.
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export function Overview() {
         <div className="card elev-sm" style={{ padding: 24 }}>
           <span className="tag tag-accent-2">Prior</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
-            What you believe about a parameter before seeing new data — e.g. "a coin is probably close to fair."
+            What you believe about a parameter before seeing new data, e.g. "a coin is probably close to fair."
           </p>
         </div>
         <div className="card elev-sm" style={{ padding: 24 }}>
@@ -43,13 +43,13 @@ export function Overview() {
         <div className="card elev-sm" style={{ padding: 24 }}>
           <span className="tag tag-accent">Evidence</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
-            Probability of that data under all hypotheses — the normalizing constant.
+            Probability of that data under all hypotheses. This is the normalizing constant.
           </p>
         </div>
         <div className="card elev-sm" style={{ padding: 24 }}>
           <span className="tag tag-neutral">Posterior</span>
           <p style={{ marginTop: 14, fontSize: 15, lineHeight: 1.55 }}>
-            Prior × likelihood, renormalized. Your updated belief — the thing we actually want.
+            Prior × likelihood, renormalized. This is your updated belief, the thing we actually want.
           </p>
         </div>
       </div>
@@ -83,7 +83,7 @@ export function Overview() {
             Reset
           </button>
           <span style={{ fontSize: 14, color: 'var(--color-neutral-700)' }}>
-            {heads} heads, {tails} tails — posterior mean {coinMean}
+            {heads} heads, {tails} tails. Posterior mean {coinMean}
           </span>
         </div>
       </div>
@@ -91,12 +91,12 @@ export function Overview() {
       <div style={{ marginTop: 56 }}>
         <h2 style={{ fontSize: 28 }}>Why not just calculate the posterior directly?</h2>
         <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--color-neutral-800)', maxWidth: 700 }}>
-          For a coin, the posterior has a tidy closed form. Real models rarely do — the posterior lives in many
-          dimensions and its normalizing constant is an intractable integral. <strong>Markov chain Monte Carlo
-          (MCMC)</strong> sidesteps this: instead of computing the posterior, it builds a Markov chain whose
+          For a coin, the posterior has a tidy closed form. Real models rarely do. The posterior lives in many
+          dimensions, and its normalizing constant is an intractable integral. <strong>Markov chain Monte Carlo
+          (MCMC)</strong> sidesteps this problem. Instead of computing the posterior, it builds a Markov chain whose
           samples converge to it, exploring high-density regions of parameter space by random walk or by
-          following the gradient of the density. The next section builds up what that means — starting with a frog
-          hopping between lily pads — before the samplers themselves.
+          following the gradient of the density. The next section builds up what that means, starting with a frog
+          hopping between lily pads, before it gets to the samplers themselves.
         </p>
       </div>
     </section>

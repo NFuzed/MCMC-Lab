@@ -27,7 +27,7 @@ export function Compare() {
     <section style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 24px 90px' }}>
       <h1 style={{ fontSize: 36, margin: '0 0 8px' }}>Compare all four, side by side</h1>
       <p style={{ fontSize: 16, color: 'var(--color-neutral-700)', maxWidth: 700, margin: '0 0 28px' }}>
-        Same target, same clock — watch how a random-walk sampler (Metropolis-Hastings, Gibbs) covers space
+        Same target, same clock. Watch how a random-walk sampler (Metropolis-Hastings, Gibbs) covers space
         differently from a gradient-guided one (HMC, NUTS).
       </p>
 
@@ -104,7 +104,7 @@ export function Compare() {
         </div>
       </div>
       <p style={{ fontSize: 12, color: 'var(--color-neutral-600)', marginTop: 14 }}>
-        NUTS here is a simplified trajectory-doubling implementation for visualization — it captures the U-turn
+        NUTS here is a simplified trajectory-doubling implementation for visualization. It captures the U-turn
         stopping idea, not every detail of the published algorithm.
       </p>
     </section>

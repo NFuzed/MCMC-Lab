@@ -22,7 +22,7 @@ export function Ensembles() {
     <section style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 24px 90px' }}>
       <h1 style={{ fontSize: 36, margin: '0 0 8px' }}>Ensemble samplers: a population of walkers</h1>
       <p style={{ fontSize: 16, color: 'var(--color-neutral-700)', maxWidth: 700, margin: '0 0 28px' }}>
-        Instead of one chain taking steps, {walkerCount} walkers explore the target together — each proposing
+        Instead of one chain taking steps, {walkerCount} walkers explore the target together. Each proposes
         its next move using the current positions of the others. Dots are every walker's current position.
       </p>
 
@@ -49,8 +49,8 @@ export function Ensembles() {
             style={{ width: '100%', aspectRatio: '1', borderRadius: 'var(--radius-md)', display: 'block' }}
           />
           <p style={{ fontSize: 13, lineHeight: 1.55, margin: '10px 0 0', color: 'var(--color-neutral-800)' }}>
-            Each walker jumps along the difference between two other random walkers, scaled by γ ≈ 2.38/√(2d) —
-            the population's own spread sets the step size.
+            Each walker jumps along the difference between two other random walkers, scaled by γ ≈ 2.38/√(2d).
+            The population's own spread sets the step size.
           </p>
           <div style={{ marginTop: 10 }}>
             <div className="formula-label">Formula</div>
@@ -90,7 +90,7 @@ export function Ensembles() {
         </div>
       </div>
       <p style={{ fontSize: 12, color: 'var(--color-neutral-600)', marginTop: 14 }}>
-        Both are population-based: no gradient, no hand-tuned step size — the ensemble's own spread does the
+        Both are population-based: no gradient, no hand-tuned step size. The ensemble's own spread does the
         work that a single chain would need a tuned proposal for.
       </p>
     </section>

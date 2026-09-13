@@ -65,11 +65,11 @@ export function MarkovChains() {
 
       <h2 style={{ fontSize: 22, margin: '0 0 8px' }}>The frog pond</h2>
       <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--color-neutral-700)', maxWidth: 720, margin: '0 0 20px' }}>
-        A frog sits on one of 14 lily pads. Every pad has a true probability of being the "best" pad — unknown to
-        the frog. Each jump, it weighs a nearby pad against its current one purely by proximity and hops there most
-        of the time, staying put 1 in 5 jumps. It never learns the pond's layout — yet given enough jumps, the
-        fraction of time it spends on each pad converges to that pad's true probability. That's the Markov chain
-        doing Monte Carlo: sampling a distribution by wandering, not by computing it.
+        A frog sits on one of 14 lily pads. Every pad has a true probability of being the "best" pad, though the
+        frog doesn't know it. Each jump, it weighs a nearby pad against its current one purely by proximity and
+        hops there most of the time, staying put 1 in 5 jumps. It never learns the pond's layout. Given enough
+        jumps, though, the fraction of time it spends on each pad converges to that pad's true probability.
+        That's the Markov chain doing Monte Carlo: sampling a distribution by wandering, not by computing it.
       </p>
 
       <div className="card elev-md" style={{ padding: 24 }}>

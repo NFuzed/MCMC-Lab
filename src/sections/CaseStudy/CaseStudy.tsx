@@ -20,7 +20,7 @@ export function CaseStudy() {
         Fitting the Michaelis-Menten model v = V<sub>max</sub>·S / (K<sub>m</sub> + S) to noisy reaction-rate
         measurements is a routine computational biology task. A single best-fit curve hides how uncertain
         V<sub>max</sub> and K<sub>m</sub> really are. Running MCMC over the two parameters instead gives a full
-        posterior — every plausible curve, and how confident we should be in each.
+        posterior: every plausible curve, and how confident we should be in each.
       </p>
 
       <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>

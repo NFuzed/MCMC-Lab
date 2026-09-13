@@ -15,7 +15,7 @@ const ALGO_DESCRIPTIONS: Record<SamplerKey, string> = {
   mh: 'Proposes a random jump from the current point and accepts it with probability proportional to how much more likely the new point is. Simple, general, but can wander slowly in correlated or high-dimensional spaces.',
   gibbs: 'Updates one coordinate at a time, holding the others fixed. Efficient when conditional distributions are simple, but moves along the axes, which struggles on strongly correlated targets.',
   hmc: 'Uses the gradient of the log-density to simulate physical dynamics (a particle rolling on the density surface), taking longer, more informed steps than a random walk.',
-  nuts: 'Extends HMC by automatically choosing how far to simulate, stopping when the trajectory starts turning back on itself — no hand-tuned step count.',
+  nuts: 'Extends HMC by automatically choosing how far to simulate. It stops when the trajectory starts turning back on itself, so there is no hand-tuned step count.',
 }
 
 const ALGO_FORMULAS: Record<SamplerKey, string> = {
